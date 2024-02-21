@@ -1,0 +1,1078 @@
+/* google font cdn link */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'montserrat', sans-serif;
+}
+
+/********default design start from here********/
+:root{
+    --primary-color-1: rgb(139, 32, 240);
+    --primary-color-2: rgb(0, 136, 255);
+    --primary-color-3: rgb(255, 0, 0);
+    --primary-color-4: rgb(37, 248, 0);
+    --primary-color-5: rgb(255, 255, 0);
+    --primary-color-6: rgb(255, 0, 251);
+
+    --text-color-1: rgb(61, 61, 61);
+    --text-color-2: rgb(251, 251, 251);
+    --white-color: rgb(255, 255, 255);
+    --input-color: #F0F2F5;
+
+    --border-radius-1: 12px;
+    --border-radius-2: 25px;
+    --border-radius-3: 50%;
+
+    --padding-1: 1rem;
+    --padding-2: .8rem 8rem;
+    --transition: 300ms;
+}
+
+button{
+    cursor: pointer;
+}
+
+.btn-1{
+    font-size: 1rem;
+    font-weight: 550;
+    padding: 0rem 1.2rem;
+    height: 38px;
+    width: 105px;
+    color: var(--text-color-2);
+    border-radius: var(--border-radius-2);
+    background-color: var(--primary-color-1);
+}
+
+.btn-2{
+    width: 110px;
+    height: 38px;
+    font-size: 1rem;
+    font-weight: 550;
+    padding: 0 1.3rem;
+    color: rgb(0, 0, 0);
+    border-radius: var(--border-radius-2);
+    background-color: rgb(186, 186, 186, .4);
+}
+
+.hero{
+    width: 100%;
+    padding: 1.1rem;
+    border-radius: 12px;
+    background: var(--white-color);
+}
+/********default design start from here********/
+
+body{
+    scroll-behavior: smooth;
+    background: var(--input-color);
+    color: var(--text-color-1);
+    transition: .4s;
+}
+
+body img{
+    cursor: pointer;
+}
+
+/********** nav start from here **********/
+nav{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white-color);
+    padding: 0 7rem;
+    box-shadow: 0 0 5px #ccc;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+nav .logo{
+    font-size: 1.5rem;
+    color: var(--primary-color-1);
+}
+
+nav .logo span{
+    color: var(--primary-color-6);
+}
+
+nav .input-box{
+    width: 36.1rem;
+    height: 2.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+nav .input-box input{
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius-2);
+    background-color: var(--input-color);
+    padding: 0 1rem 0 2.5rem;
+    font-size: 1rem;
+}
+
+.input-box i{
+    position: absolute;
+    left: 1rem;
+    font-size: 1.2rem;
+    opacity: .9;
+}
+
+nav .profile-box{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-box .dark-mode{
+    width: 4.2rem;
+    height: 2rem;
+    background: var(--input-color);
+    border-radius: var(--border-radius-2);
+    display: flex;
+    align-items: center;
+}
+
+.dark-mode.active{
+    background-color: rgb(139, 42, 140, 0.2);
+}
+
+.profile-box .dark-mode span{
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: var(--border-radius-3);
+    background: #969696;
+    position: absolute;
+    transition: var(--transition);
+}
+
+.dark-mode span.dark-mode-toggle{
+    transform: translate(30px);
+    background: var(--primary-color-1);
+}
+
+.profile-box img{
+    width: 3.1rem;
+    height: 3.1rem;
+    border-radius: var(--border-radius-3);
+    border: 2px solid var(--primary-color-1);
+}
+/*********** navbar end from here ***********/
+
+
+/******* container start from here *******/
+.container{
+    padding: 6.6rem 7rem 0;
+    display: grid;
+    grid-template-columns: 24% auto 24%;
+    gap: 2rem;
+}
+
+.container .left-section{
+    top: 6.6rem;
+    position: sticky;
+    height: max-content;
+}
+
+.middle-section{
+    overflow: hidden;
+}
+
+.right-section{
+    overflow-y: scroll;
+    top: 6.6rem;
+    position: sticky;
+    height: 86vh;
+}
+
+.right-section::-webkit-scrollbar{
+    width: 6px;
+    height: 5px;
+}
+
+.right-section:hover::-webkit-scrollbar-track{
+    background: var(--primary-color-1);
+    border-radius: 25px;
+}
+
+.right-section:hover::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color-2);
+    border-radius: var(--border-radius-2);
+}
+
+/*********left section start from here*******/
+.container .left-section .user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.container .left-section .user img{
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--primary-color-1);
+    border-radius: var(--border-radius-3);
+}
+
+.left-section .user h5{
+    font-size: 1.3rem;
+}
+
+.left-section .user .muted{
+    font-size: .9rem;
+    opacity: .8;
+}
+
+.shortcut-icon{
+    padding: 0;
+}
+
+.shortcut-icon a{
+    display: flex ;
+    gap: 3rem;
+    color: var(--text-color-1);
+    padding: 1rem 2rem;
+    transition: var(--transition);
+}
+
+.shortcut-icon a:hover{
+    background: var(--input-color);
+}
+
+.shortcut-icon a:hover.hover-color{
+    color: black;
+}
+
+.shortcut-icon .active{
+    border-left: 7px solid var(--primary-color-1);
+    color: var(--primary-color-1);
+    background: var(--input-color);
+}
+
+.shortcut-icon .active:first-child{
+    border-top-left-radius: 12px;
+}
+
+.shortcut-icon .active:last-child{
+    border-bottom-left-radius: 12px;
+}
+
+.shortcut-icon a i{
+    font-size: 1.3rem;
+}
+
+.shortcut-icon a h3{
+    font-size: .9rem;
+}
+
+.create-btn{
+    margin-top: 2rem;
+    width: 100%;
+    height: 43px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.msg-count,
+.noti-count
+{
+    position: relative;
+}
+
+.popup-msg,
+.popup-noti
+{
+    font-size: .5rem;
+    font-weight: bold;
+    padding: 3px;
+    left: 2.7rem;
+    top: .7rem;
+    position: absolute;
+    border-radius: var(--border-radius-3);
+    color: var(--white-color);
+    background: var(--primary-color-1);
+}
+/*********left section ends from here*******/
+
+/**********************middle section ends from here***********************/
+/********story start form here**************/
+.swiper {
+    width: 100%;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+
+.story{
+    display: flex;
+}
+
+.story .story-user{
+    height: 11rem;
+    width: 8rem;
+    background-color: var(--white-color);
+    border-radius: var(--border-radius-1);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.story-user img{
+    height: 70%;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.plus{
+    position: absolute;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    background-color: var(--primary-color-1);
+    color: var(--white-color);
+    bottom: 21%;
+    width: 30px;
+    padding: 2px;
+    text-align: center;
+}
+
+.add{
+    position: absolute;
+    bottom: .9rem;
+    font-weight: bold;
+}
+
+.single-story{
+    width: 8rem;
+    height: 11rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.single-story .s-big-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: fill; 
+}
+
+.single-story .s-small-img{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: .5rem;
+    object-fit: cover;
+    border: 2px solid var(--primary-color-1);
+}
+
+.single-story h5{
+    position: absolute;
+    color: var(--white-color);
+    bottom: .6rem;
+    left: .3rem;
+    padding: 0 .3rem;
+}
+/********story ends form here**************/
+
+/********create post start from here**************/
+.create-post{
+    width: 100%;
+    height: 2.7rem;
+    margin: 1rem 0  ;
+    display: flex;
+    padding: .8rem;
+    align-items: center;
+    background: var(--white-color);
+    border-radius: var(--border-radius-2);
+}
+
+.create-post img{
+    width: 35px;
+    aspect-ratio: 1/1;
+    border-radius: var(--border-radius-3);
+}
+
+.create-post div{
+    text-align: center;
+    background: var(--primary-color-1);
+    color: var(--white-color);
+    padding: .5rem 1rem;
+    right: .3rem;
+    border-radius: var(--border-radius-2);
+    font-weight: 500;
+}
+
+.create-post input{
+    padding: 1rem;
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+}
+/********create post ends from here**************/
+
+/********post section start from here***********/
+.single-post{
+    margin-bottom: 1rem;
+}
+
+.new-post{
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.single-post img{
+    object-fit: cover;
+}
+
+.post-top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .6rem;
+}
+
+.post-top a{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.post-top a:hover{
+    background: var(--input-color);
+}
+
+.user-name h5{
+    font-size: 1.1rem;
+}
+
+.user-name p{
+    font-size: .7rem;
+    opacity: .8;
+}
+
+.post-user{
+    display: flex;
+    gap: .8rem;
+}
+
+.post-user img{
+    width: 40px;
+    aspect-ratio: 1/1;
+    border-radius: var(--border-radius-3);
+    border: 1px solid var(--primary-color-1);
+}
+
+.post-big-img{
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.post-react{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin: .3rem 0;
+}
+
+.post-react span i{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.post-react span i img{
+    height: 1.2rem;
+    aspect-ratio: 1/1;
+}
+
+.post-react span:nth-child(2) i{
+    font-size: 1.3rem;
+}
+
+.react-details{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.desc{
+   font-size: .9rem;
+}
+
+.desc a{
+    color: var(--primary-color-6);
+    font-weight: 500;
+}
+
+.react-details span{
+    display: flex;
+}
+
+.react-details span img{
+    width: 30px;
+    height: 30px;
+    border-radius: var(--border-radius-3);
+    border: 2px solid #fff;
+    overflow: hidden;
+    display: block;
+    margin-left: -.6rem;
+}
+
+.react-details p span{
+    font-weight: 600;
+    margin: 0 .3rem ;
+}
+
+.react-details .like{
+    display: flex;
+    font-size: .9rem;
+}
+/********post section ends from here***********/
+
+/**********theme start from here********/
+.theme{
+    width: 645px;
+    height: 420px;
+    background: var(--white-color);
+    border-radius: var(--border-radius-1);
+    padding: 2rem;
+    text-align: center;
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    box-shadow: 0 0 1rem var(--primary-color-1);
+}
+
+.theme .themeactive{
+    opacity: 1;
+}
+
+.theme-title{
+    margin-bottom: 3.2rem;
+}
+
+.theme-title p{
+    font-size: .9rem;
+}
+
+.theme .font-size > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .4rem;
+    background: var(--input-color);
+    padding: .2rem .4rem;
+    border-radius: var(--border-radius-2);
+}
+
+.font-size div .font-value{
+    height: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(234, 212, 255);
+    border-radius: var(--border-radius-2);
+}
+
+.font-size-1{
+    height: 10px;
+    width: 10px;
+    background: rgb(234, 212, 255);
+    border-radius: var(--border-radius-3);
+}
+
+.font-size-2{
+    height: 12px;
+    width: 12px;
+    background: rgb(234, 212, 255);
+    border-radius: var(--border-radius-3);
+}
+
+.font-size-3{
+    height: 14px;
+    width: 14px;
+    background: rgb(234, 212, 255);
+    border-radius: var(--border-radius-3);
+}
+
+.font-size-4{
+    height: 16px;
+    width: 16px;
+    background: rgb(234, 212, 255);
+    border-radius: var(--border-radius-3);
+}
+
+.font-size-5{
+    height: 18px;
+    width: 18px;
+    background: rgb(234, 212, 255);
+    border-radius: var(--border-radius-3);
+}
+
+.color{
+    margin: 2rem 0;
+}
+
+.font-size p,.color p,.bg-color p{
+    margin-bottom: .5rem;
+    font-weight: 550;
+}
+
+.color div{
+    display: flex;
+    border-radius: var(--border-radius-2);
+    padding: .3rem .5rem;
+    justify-content: space-between;
+    background-color: rgb(234, 212, 255);
+}
+
+.color-1{
+    width: 20px;
+    height: 20px;
+    border-radius: var(--border-radius-3);
+    background: rgb(139, 32, 240);
+}
+
+.color-2{
+    width: 20px;
+    height: 20px;
+    border-radius: var(--border-radius-3);
+    background: rgb(0, 136, 255);
+}
+
+.color-3{
+    width: 20px;
+    height: 20px;
+    border-radius: var(--border-radius-3);
+    background: rgb(255, 0, 0);
+}
+
+.color-4{
+    width: 20px;
+    height: 20px;
+    border-radius: var(--border-radius-3);
+    background: rgb(37, 248, 0);
+}
+
+.color-5{
+    width: 20px;
+    height: 20px;
+    border-radius: var(--border-radius-3);
+    background: rgb(255, 255, 0);
+}
+
+.color-6{
+    width: 20px;
+    height: 20px;
+    border-radius: var(--border-radius-3);
+    background: rgb(255, 0, 251);
+}
+
+.bg-color > div{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.light,.dim,.dark{
+    border: 2px solid rgb(51, 22, 79);
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    font-weight: 550;
+    border-radius: 5px;
+    padding: .4rem 2.5rem .4rem .5rem;
+}
+
+.light span,
+.dim span,
+.dark span{
+    height: 30px;
+    width: 30px;
+    border-radius: var(--border-radius-3);
+    border: 2px solid rgb(51, 22, 79);
+}
+
+.dim{
+    background: rgb(47, 5, 85);
+    color: var(--white-color);
+}
+
+.dark{
+    border: none;
+    background: black;
+    color: var(--white-color);
+}
+
+.dim span, .dark span{
+    border: 2px solid var(--white-color)!important;
+}
+/**********theme ends from here********/
+
+/**********new post start from here*******/
+.create-post-section{
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    width: 645px;
+    height: 400px;
+    display: none;
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 1rem var(--primary-color-1);
+}
+
+.create-post-top{
+    display: flex;
+    justify-content: center;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid var(--primary-color-1);
+}
+
+.create-post-top h3{
+    font-size: 1.4rem;
+}
+
+.create-post-top i{
+    position: absolute;
+    right: 1rem;
+    font-size: 1.4rem;
+    opacity: .7;
+    transition: .1s;
+}
+
+.create-post-top i:hover{
+    opacity: 1;
+}
+
+.create-post-user{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.create-post-user img{
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius-3);
+    border: 1px solid var(--primary-color-1);
+}
+
+.create-post-user p{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.create-post-user select{
+    background-color: var(--input-color);
+    padding: .1rem .2rem;
+    border-radius: 3px;
+    font-size: .8rem;
+    width: 70px;
+}
+
+.create-post-section input{
+    width: 100%;
+    height: 150px;
+    background-color: var(--input-color);
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.create-post-section button{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+}
+
+.create-post-section button:hover{
+    background: rgb(152, 61, 238);
+}
+/**********new post ends from here*******/
+
+/*********profile change start from here********/
+.change-profile{
+    position: absolute;
+    background: var(--white-color);
+    border-radius: var(--border-radius-1);
+    left: 7rem;
+    top: 6.9rem;
+    display: none;
+    text-align: center;
+    height: 300px;
+    width: 325px;
+    z-index: 1;
+    box-shadow: 0 0 5px var(--primary-color-1);
+}
+
+.change-profile img{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+    border-radius: var(--border-radius-3);
+    border: 1px solid var(--primary-color-1);
+}
+
+.change-profile input{
+    display: none;
+}
+
+.change-profile label{
+    background: var(--primary-color-1);
+    color: var(--white-color);
+    width: 80%;
+    height: 40px;
+    margin: 1.8rem auto;
+    display: block;
+    border-radius: 10px;
+    line-height: 40px;
+    font-weight: 550;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.change-profile label:hover,
+.create-btn:hover{
+    background: rgb(152, 61, 238);
+}
+/*********profile change start from here********/
+/**********************middle section ends from here***********************/
+
+/********************** right section start from here *********************/
+/**********message start from here*******/
+.msg-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .8rem;
+}
+
+.msg-search-bar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.msg-search-bar input{
+    width: 100%;
+    height: 32px;
+    border-radius: var(--border-radius-2);
+    padding: 0 1rem 0 2rem;
+    background: var(--input-color);
+}
+
+.msg-search-bar i{
+    position: absolute;
+    left: .5rem ;
+    font-size: 1.2rem;
+    opacity: .8;
+}
+
+.msg-shortcut{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.msg-shortcut p{
+    border-bottom: 3px solid var(--input-color);
+    padding-bottom: .2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.msg-shortcut .msg-srt-active{
+    border-color: var(--primary-color-1);
+}
+
+.single-chat{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.single-chat img{
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--primary-color-1);
+    border-radius: var(--border-radius-3);
+}
+
+.single-chat h5{
+    font-size: .9rem;
+}
+
+.single-chat p{
+    font-size: .8rem;
+    opacity: .8;
+}
+
+.single-chat .active{
+    width: 10px;
+    height: 10px;
+    left: 2rem;
+    top: 1.6rem;
+    position: absolute;
+    background: var(--primary-color-4);
+    border-radius: var(--border-radius-3);
+}
+
+.new-msg{
+    font-weight: 600;
+    color: black;
+
+}
+/*********message ends from here*******/
+
+/********friend start from here********/
+.friend{
+    margin-top: 1rem;
+}
+
+.friend .single-fnd{
+    margin-bottom: 1rem;
+}
+
+.single-fnd .fnd-top{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: .4rem;
+}
+
+.fnd-top img{
+    width: 40px;
+    aspect-ratio: 1/1;
+    border: 1px solid var(--primary-color-1);
+    border-radius: var(--border-radius-3);
+}
+
+.fnd-top span p:first-child{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.fnd-top span p{
+    font-size: .8rem;
+}
+/********friend ends from here********/
+/********************** right section start from here *********************/
+
+
+
+/*--------media query start form here------------------------------------------------------------------------------------------------*/
+@media (max-width: 600px) {
+/**********nav start from here**********/
+    nav{
+        padding: 0 2rem;
+    }
+
+    nav .input-box{
+        display: none;
+    }
+
+    .container{
+        padding: 6rem 1rem 0;
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 15% 80%;
+    }
+/**********nav ends from here**********/
+
+/**********left start from here**********/
+    .container .left-section .user{
+        display: none;
+    }
+
+    .shortcut-icon a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .shortcut-icon a i{
+        font-size: 1.8rem;
+    }
+
+    .shortcut-icon a h3{
+        display: none;
+    }
+
+    .create-btn{
+        display: none;
+    }
+/**********left ends from here**********/
+
+/**********middle start from here**********/
+    .create-post-section{
+        width: 452px;
+        height: 360px;
+        left: 59%;
+    }
+
+    .theme{
+        width: 452px;
+        left: 59%;
+        height: 360px
+    }
+
+    .theme-title{
+        margin-bottom: 1rem;
+    }
+
+    .light, .dim, .dark{
+        padding: .4rem 1.2rem .4rem .5rem;
+    }
+/**********middle ends from here**********/
+
+/**********right start from here**********/
+    .right-section{
+        position: absolute;
+        left: 59%;
+        top: 55%;
+        display: none;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    .message{
+        width: 452px;
+        left: 59%;
+        border: 1px solid var(--primary-color-1);
+    }
+
+    .single-fnd{
+        border: 1px solid var(--primary-color-1);
+    }
+}
+/**********right ends from here**********/
+
+.tmi{
+    background-color: #01aa26;
+}
